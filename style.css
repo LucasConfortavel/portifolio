@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.bolhas{
+    position: absolute;
+    display: flex;
+    width: 100%;
+}
+
+.bolhas span{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(250, 134, 201);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px black,
+    0 0 50px white,
+    0 0 100px white;
+    animation: animar calc(390s / var(--i)) linear infinite;
+}
+
+@keyframes animar{
+    0%{
+        transform: translateY(90vh) scale(0);
+    }
+    100%{
+        transform: translateY(-100vh) scale(1);
+    }
+}
+
+
+.bolhas span:nth-of-type(even) {
+    background: rgb(94, 176, 243);
+    box-shadow: 0 0 0 10px rgb(0, 0, 0),
+    0 0 50px white,
+    0 0 100px white;
+
+}
+
+.menu{
+    width: 100%;
+    padding: 28px 28px;
+    top: 0;
+
+}
+
+
+
+.nav-bar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lucas{
+    display: flex;
+    font-size: 15px;
+    color: aqua;
+    font-family: "Coiny", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inicio{
+    width: 100%;
+    display: flex;
+    
+}
+
+.texto-inicio{
+    display: flex;
+    margin-left: 150px;
+    flex-direction: column;
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    gap: 20px;
+}
+
+.linke{
+    display: flex;
+    margin-top: 20px;
+}
+
+.mini-texto{
+    display: flex;
+    text-decoration: none;
+    text-decoration-line: none;
+    font-size: 12px;
+
+}
+
+.lucas-inicio{
+    display: flex;
+    font-size: 70px;
+    font-family: "Modak", serif;
+    font-weight: 400;
+    
+    background: linear-gradient(45deg,#5aa9e6, #7fc8f8 ,#f9f9f9, #ffe45e, #ff6392, #f3a3bb, #f9f9f9, #7fc8f8, #6db9ef);
+    background-size: 400% 100%;
+    animation: degrade_lucas 13s linear infinite;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes degrade_lucas {
+    0%{
+        background-position-x: 0%;
+    }
+
+    100%{
+        background-position: 400%;
+    }
+}
+
+.experiencia{
+    display: flex;
+    font-size: 15px;
+    font-weight: 300;
+    color: aqua;
+}
+
+.sobre{
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(109, 108, 108);
+}
+
+.fa-solid{
+    color: white;
+}
+
+.tracinhos{
+    position: sticky;
+    color: white;
+    background-color: aliceblue;
+}
+
+.menu, .texto-inicio, .coisas-que-fiz{
+    visibility: hidden;
+}
+
+.coisas-que-fiz{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.sobre_projetos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.cards-trabalhos{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    margin-top: 50px;
+    background-color: transparent;
+    gap: 25px;
+    justify-content: center;
+
+}
+
+.card1{
+    display: flex;
+    width: 32%;
+    height: 100%;
+    background: linear-gradient(135deg,#ffe5ec,#ffb3c6,#fb6f92);
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card2{
+    display: flex;
+    width: 32%;
+    height: 100%;
+    background: linear-gradient(135deg,#7bdff2,#eff7f6,#f2b5d4);
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card3{
+    display: flex;
+    width: 32%;
+    height: 100%;
+    background: linear-gradient(135deg,#ffdab9,#f8ad9d,#f08080);
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.imggitchub{
+    display: flex;
+}
+
+
+.githubpng{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-left: 290px;
+    margin-top: 10px;
+}
+
+.nomeprojeto{
+    display: flex;
+    color: black;
+    font-weight: bold;
+    margin-left: 90px;
+    margin-top: 60%;
+
+}
+
+.nomeprojeto2{
+    display: flex;
+    color: black;
+    font-weight: bold;
+    margin-left: 90px;
+    margin-top: 52%;
+}
+
+
+
+.oqueusei{
+    display: flex;
+    color: black;
+    margin-left: 90px;
+    margin-top: 20px;
+    font-size:X-small;
+    font-weight:500;
+}
+
+.skills{
+    display: flex;
+    margin-top: 60px;
+    margin-left: 150px;
+    margin-right: 150px;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.minhasskills {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    margin-top: 50px;
+    background: transparent;
+    gap: 25px;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+
+
+.liskills{
+    list-style: none;
+    color: rgb(109, 108, 108);
+    font-size: small;
+    margin-top: 7px;
+
+}
+
+
+
+.htmlicon{
+    display: flex;
+    padding: 3px;
+}
+
+.html01{
+    display: flex;
+    width: 31%;
+    height: 100%;
+    background: transparent;;
+    flex-direction: column;
+    border: 2px solid rgb(109, 108, 108);
+    background-color: transparent; 
+    padding: 10px; 
+    border-radius: 2%;
+}
+
+
+.primeirafileira{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background: transparent;
+    gap: 25px;
+    margin-top: 0px;
+    
+}
+
+.segundafileira{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background: transparent;
+    gap: 25px;
+    margin-top: 0px;
+}
+
+
+.html01 .barras{
+    background-color: rgb(109, 108, 108);
+    display: block;
+    height: 10px;
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+    transition: width 2s ease-out;
+}
+
+.html01 .visible .barras {
+    animation: crescer 2s ease-out forwards;
+}
+
+
+
+.barras > span{
+    height: 10px;
+    background: linear-gradient(to right, #023e8a, #0077b6, #00b4d8);
+    position: absolute;
+}
+
+.html{
+    width: 70%;
+    animation: html 3s;
+}
+
+.css{
+    width: 60%;
+    animation: css 3s;
+}
+
+.js{
+    width: 20%;
+    animation: js 3s;
+}
+
+.py{
+    width: 60%;
+    animation: py 3s;
+}
+
+.mysql{
+    width: 40%;
+    animation: mysql 3s;
+}
+
+@keyframes html {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+@keyframes css {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+
+@keyframes js {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 20%;
+    }
+}
+
+@keyframes py {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+
+@keyframes mysql {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 40%;
+    }
+}
+
+.minhasskills.visible {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+section{
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 100vh;
+}   
+

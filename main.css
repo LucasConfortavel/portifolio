@@ -1,0 +1,46 @@
+@import url(style.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Modak&display=swap');
+
+
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+li{
+    text-decoration: none;
+    text-decoration-line: none;
+}
+.btn-padrao{
+    width: 100px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:aqua;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-weight: 600;
+    cursor: pointer;
+    /*box-shadow: 0px 0px 10px 2px rgb(255, 255, 255);*/
+    transition: background-color 2s ease;
+    transition: color 2s ease;
+    color:rgb(0, 0, 0);
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn-padrao:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 6px 1px rgb(255, 255, 255);
+}
