@@ -3,8 +3,8 @@ window.sr = ScrollReveal({ reset: true});
 sr.reveal('.menu', {duration: 1000,});
 
 sr.reveal('.texto-inicio', {
-    rotate: {x: 0, y:50, z:0},
-    duration: 3000
+    rotate: {x: 0, y:0, z:0},
+    duration: 2000
 
 });
 

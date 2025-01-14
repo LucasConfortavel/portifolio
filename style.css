@@ -13,6 +13,9 @@ body{
     position: absolute;
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
 
 .bolhas span{
@@ -49,7 +52,8 @@ body{
     width: 100%;
     padding: 28px 28px;
     top: 0;
-
+    flex-wrap: wrap; 
+    justify-content: space-between;
 }
 
 
@@ -77,12 +81,14 @@ body{
 }
 
 .texto-inicio{
-    display: flex;
-    margin-left: 150px;
     flex-direction: column;
-    display: flex;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     gap: 20px;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    min-width: 320px;
+    max-width: 800px;
+    padding: 12%;
 }
 
 .linke{
@@ -156,6 +162,7 @@ body{
     margin-right: 150px;
     flex-direction: column;
     align-items: baseline;
+
 }
 
 .sobre_projetos{
@@ -168,12 +175,21 @@ body{
 .cards-trabalhos{
     width: 100%;
     height: 350px;
-    display: flex;
     margin-top: 50px;
     background-color: transparent;
     gap: 25px;
-    justify-content: center;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    background-color: #0077b6;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
+}
+@media (max-width: 600px) {
+    .cards-trabalhos {
+      font-size: 1.5rem;
+      margin-left: 0px;
+    }
 }
 
 .card1{
