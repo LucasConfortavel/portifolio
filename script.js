@@ -16,32 +16,17 @@ sr.reveal('.skills', {duration: 2000});
 
 
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        } else {
-            entry.target.classList.remove('visible');
-        }
-    });
-}, {
-    threshold: 0.5 });
-
-const skillsSection = document.querySelector('.minhasskills');
-observer.observe(skillsSection);
-
-const checkVisibility = () => {
-    const rect = skillsSection.getBoundingClientRect();
-    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        skillsSection.classList.add('visible'); 
-    }
-};
-
-checkVisibility();
-
-window.addEventListener('scroll', checkVisibility);
 
 
+
+
+
+
+
+
+
+
+let Progresso = document.q
 
 
 

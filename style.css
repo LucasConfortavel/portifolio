@@ -9,6 +9,9 @@ body{
     color: white;
 }
 
+
+
+
 .bolhas{
     position: absolute;
     display: flex;
@@ -158,15 +161,12 @@ body{
     align-items: baseline;
     width: 100%;
     height: 100%;
-
-
 }
 
 .sobre_projetos{
     display: flex;
     flex-direction: column;
     gap: 10px;
-
 }
 
 .cards-trabalhos{
@@ -215,6 +215,11 @@ body{
     padding: 4%;
 }
 
+.card1:hover{
+    transform: scale(1.05);
+    transition: .6s;
+}
+
 .card2{
     display: flex;
     width: 100%;
@@ -223,6 +228,11 @@ body{
     flex-direction: column;
     gap: 10px;
     padding: 4%;
+}
+
+.card2:hover{
+    transform: scale(1.05);
+    transition: .6s;
 }
 
 .card3{
@@ -235,6 +245,10 @@ body{
     padding: 4%;
 }
 
+.card3:hover{
+    transform: scale(1.05);
+    transition: .6s;
+}
 
 .imggitchub{
     display: grid;
@@ -253,7 +267,7 @@ body{
     color: black;
     font-weight: bold;
     margin-left: 27%;
-    margin-top: 60%;
+    margin-top: 61%;
 
 }
 
@@ -278,189 +292,101 @@ body{
 
 .skills{
     display: flex;
+    justify-content: center;
     width: 100%;
     padding: 12%;
     flex-direction: column;
     align-items: baseline;
+    min-height: 100vh;
 
 }
 
-.minhasskills {
-    width: 100%;
-    display: flex;
-    margin-top: 9%;
-    background: transparent;
-    gap: 25px;
-    flex-direction: column;
-    opacity: 0;
-    transition: opacity 1s ease-out;
-    height: 200px;
-    
-
-}
-
-
-
-.liskills{
-    list-style: none;
-    color: rgb(109, 108, 108);
-    font-size: small;
-
-}
-
-
-
-.htmlicon{
-    display: flex;
-    padding: 3px;
-}
-
-.html01{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background: transparent;;
-    flex-direction: column;
-    border: 2px solid rgb(109, 108, 108);
-    background-color: transparent; 
-    padding: 20px; 
-    border-radius: 2%;
-}
-
-
-
-.primeirafileira{
-    display: flex;
-    width: 100%;
-    height: 50%;
-    background: transparent;
-    gap: 25px;
-    
-    
-}
-
-.segundafileira{
-    display: flex;
-    width: 100%;
-    height: 50%;
-    background: transparent;
-    gap: 25px;
-    
-}
-
-
-.html01 .barras{
-    background-color: rgb(109, 108, 108);
-    display: block;
-    height: 10%;
-    width: 100%;
-    border-radius: 20px;
-    margin-top: 5%;
+.container{
     position: relative;
-    overflow: hidden;
-    opacity: 1;
-    transition: width 2s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 23px;
+    margin-top: 9%;
 }
 
-.html01 .visible .barras {
-    animation: crescer 2s ease-out forwards;
+.container .progresso{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    color: #fff;
+    background: #444 linear-gradient(to right, transparent
+    50%, var(--clr) 0);
+
 }
 
-
-
-.barras > span{
-    height: 10px;
-    background: linear-gradient(to right, #023e8a, #0077b6, #00b4d8);
+.container .progresso h3{
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2.5em;
+    z-index: 1;
+    font-weight: 500;
 }
 
-.html{
-    width: 70%;
-    animation: html 3s;
+.container .progresso h3 span{
+    font-size: 0.65em;
+    font-weight: 400;
 }
 
-.css{
-    width: 60%;
-    animation: css 3s;
+.container .progresso h4{
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    font-weight: 500;
+    color: var(--clr);
+    text-transform: uppercase;
 }
 
-.js{
-    width: 20%;
-    animation: js 3s;
+.container .progresso::before{
+    content: '';
+    display: block;
+    height: 100%;
+    margin-left: 50%;
+    transform-origin: left;
+    border-radius: 0 100% 100% 0/50%;
 }
 
-.py{
-    width: 60%;
-    animation: py 3s;
+.container .progresso::after{
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border-radius: 50%;
+    background: #222;
+
 }
 
-.mysql{
-    width: 40%;
-    animation: mysql 3s;
+.container .progresso::before{
+    background: var(--clr);
+    transform: rotate(calc(((var(--i) - 50) * 0.01turn)));
+
 }
 
-.php{
-    width: 5%;
-    animation: php 3s;
+.container .progresso.less::before{
+    background: #444;
+    transform: rotate(calc(((var(--i) - 0) * 0.01turn)));
 }
 
-@keyframes html {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 70%;
-    }
-}
 
-@keyframes css {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 60%;
-    }
-}
 
-@keyframes js {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 20%;
-    }
-}
 
-@keyframes py {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 60%;
-    }
-}
 
-@keyframes mysql {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 40%;
-    }
-}
 
-@keyframes php {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 10%;
-    }
-}
 
-.minhasskills.visible {
-    opacity: 1;
-}
+
+
+
+
 
 
 
@@ -474,11 +400,75 @@ section{
 
 
 .footer{
+    background: #222;
+    height: auto;
+    width: 100vw;
+    font-family: 'Open Sans*';
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
     display: flex;
-    background-color: #00b4d8;
-    width: 100%;
-    height: 400px;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 3%;
+    text-align: center;
+    background-color: #222;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    transition: color 4.s ease;
+}
+
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-buttom{
+    background: #222;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-buttom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-buttom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
 }
