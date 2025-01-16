@@ -10,8 +10,6 @@ body{
 }
 
 
-
-
 .bolhas{
     position: absolute;
     display: flex;
@@ -72,7 +70,7 @@ body{
     display: flex;
     font-size: 15px;
     color: aqua;
-    font-family: "Coiny", serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -109,9 +107,9 @@ body{
     font-family: "Modak", serif;
     font-weight: 400;
     
-    background: linear-gradient(45deg,#5aa9e6, #7fc8f8 ,#f9f9f9, #ffe45e, #ff6392, #f3a3bb, #f9f9f9, #7fc8f8, #6db9ef);
+    background: linear-gradient(45deg,#7fc8f1,#5aa9e6, #7fc8f8 ,#f9f9f9, #ffe45e, #ff6392, #f3a3bb, #f9f9f9, #7fc8f8, #6db9ef);
     background-size: 400% 100%;
-    animation: degrade_lucas 13s linear infinite;
+    animation: degrade_lucas 25s linear infinite;
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -254,6 +252,10 @@ body{
     display: grid;
 }
 
+.githubpng:hover{
+    box-shadow: 0px 0px 6px 1px black;
+    border-radius: 100%;
+}
 
 .githubpng{
     display: flex;
@@ -309,6 +311,7 @@ body{
     flex-wrap: wrap;
     gap: 23px;
     margin-top: 9%;
+    align-items: baseline;
 }
 
 .container .progresso{
@@ -377,8 +380,19 @@ body{
     transform: rotate(calc(((var(--i) - 0) * 0.01turn)));
 }
 
+.backdoprogresso{
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    border-radius: 10%;
+}
 
+.linkcalculadora{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
 
+}
 
 
 
