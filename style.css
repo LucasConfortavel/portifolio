@@ -309,9 +309,10 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 23px;
+    gap: 50px;
     margin-top: 9%;
     align-items: baseline;
+    width: 100%;
 }
 
 .container .progresso{
